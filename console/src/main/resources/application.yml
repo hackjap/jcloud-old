@@ -1,0 +1,59 @@
+server:
+  port: 9080
+
+spring:
+#  rabbitmq:
+#    host: 192.168.50.208
+#    port: 5672
+#    username: admin
+#    password: okestro2018!
+  datasource:
+    driver-class-name: org.mariadb.jdbc.Driver
+    url: jdbc:mariadb://100.0.0.230:3306/test
+    username: portal
+    password: portal
+#  redis:
+#    host: 192.168.50.208
+#    port: 6379
+#    password: okestro2018!
+#  keycloak:
+#    realm: springboot-test
+#    # Client
+#    resource: springboot.demo
+#    # Keycloak URL
+#    auth-server-url: http://191.168.50.208:8880/auth
+#    ssl-required: external
+#    credentials.secret: icbBgtMsoWEhpopWx8KvSNQPbRndeVLE
+#    use-resource-role-mappings: true
+
+#    Ec
+#    use_at: true
+#    admin_cli_id: ${adp.keycloak.admin_cli_id}
+#    admin_cli_pw: ${adp.keycloak.admin_cli_pw}
+#    client_id: ${adp.keycloak.client_id}
+#    client_secret: ceXHOXcFHPbQsSdwYDvJ7Aj7l4jDiUZv
+#
+#  autoconfigure:
+#    exclude: org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration
+#  security:
+#    user:
+#      name: admin
+#      password: admin123!
+
+logging:
+  pattern:
+    console: "%d %-5level %logger : %msg%n"
+  level:
+    cloudPlatform: INFO
+    org.springframework: DEBUG
+
+# Kubernetes
+config:
+  kubernetes:
+    clusters:
+      name: new-dev-cluster
+      url: https://100.0.0.198:6443
+      token: eyJhbGciOiJSUzI1NiIsImtpZCI6IjRjbk9iUnJFRVRmWHM2S0NneEdQM1p0ZlYzNEh0TTFxdFI4cE9TdHExbjQifQ.eyJpc3MiOiJrdWJlcm5ldGVzL3NlcnZpY2VhY2NvdW50Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9uYW1lc3BhY2UiOiJkZWZhdWx0Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZWNyZXQubmFtZSI6InNhLWFkbWluLXRva2VuLTJrYmRqIiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZXJ2aWNlLWFjY291bnQubmFtZSI6InNhLWFkbWluIiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZXJ2aWNlLWFjY291bnQudWlkIjoiZjBkMTYyMjgtN2E2OC00MDFjLWJmMTktNTM4ZGJkOTY0YjcyIiwic3ViIjoic3lzdGVtOnNlcnZpY2VhY2NvdW50OmRlZmF1bHQ6c2EtYWRtaW4ifQ.rDB4Q79Y8bQriBeJCXX6A3nHnGqKx428SarxdI_ULRDB1jWIrus5ijF1U5Enl0XrbCMQHkQGgYiv3VuJizqLU1b_YWN1-zod-OnrvNsqaGb4QmVj71bxs_EBadLKwZuIMlAJXB-w6DQZ3o35IMuAP7cxgpReCcXSvk15PgejTmZ9YSCwCRSqmJ0jhZQ5cXegcaQYdQK0iwzrpq4sqRpXcVBABn0qCvmH4vJ9yUo3cyOUeWb0EC48BMXqnyZQp7uCl7OQqbREH-Rl3tOXSvqOg6Lvo6vfVRzryGY8S3WAP8-zi2yZXDfPwNUMh3iL76rwV8xOe0mwynYkBEWJ0z5aPw
+#      dev-cluster:
+#        url: http://100.0.0.175:6443
+#        token: eyJhbGciOiJSUzI1NiIsImtpZCI6InZwSFkyQmFyaDlNNTBOcF90enZPMHo0eDVfTnVaNkR5bkdvQko2M0NIcVUifQ.eyJpc3MiOiJrdWJlcm5ldGVzL3NlcnZpY2VhY2NvdW50Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9uYW1lc3BhY2UiOiJkZWZhdWx0Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZWNyZXQubmFtZSI6ImRlZmF1bHQtdG9rZW4taGNiZ2YiLCJrdWJlcm5ldGVzLmlvL3NlcnZpY2VhY2NvdW50L3NlcnZpY2UtYWNjb3VudC5uYW1lIjoiZGVmYXVsdCIsImt1YmVybmV0ZXMuaW8vc2VydmljZWFjY291bnQvc2VydmljZS1hY2NvdW50LnVpZCI6ImUyYTMxOWU5LTQwN2YtNDYxMS1hNTc1LTAwZTA2ZGZmMDQ5NSIsInN1YiI6InN5c3RlbTpzZXJ2aWNlYWNjb3VudDpkZWZhdWx0OmRlZmF1bHQifQ.iwilzRfSxq9nG3TgZ0RPCwFZlhZXDJkuEEY_9S9ZPGrOOpMgilJpI9pjp3OiMhn0piGGmOEsNRwsSloalkdn_74SPkyhQzaXMh7uvS3pGIYC6OuNxMcfHDaiUr__N4gsRIa-_vX9PPvNLsXpEm5MVnTrDVBtPF2kbcaFcTku6m1wtiPt0r7jQpPOF5B2B_M928vdA1-MzQiOb86xCpzM58_WR1JEazEA7IDyAfyeV3pjF5FVA1yc9rEW0fIhSFWaOyQb7_yQfJ5vhbqBH-CPYRpHbdOMW6Pzs8eHQ3Tj3c3Rta4x1TKIn4CPA_X7ZkA1ICCXNrQfUGcu9BKjA3xvdw

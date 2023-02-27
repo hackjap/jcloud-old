@@ -1,0 +1,28 @@
+server:
+  port: 8888
+
+spring:
+  rabbitmq:
+    host: 192.168.50.208
+    port: 5672
+    username: admin
+    password: okestro2018!
+  datasource:
+    driver-class-name: org.mariadb.jdbc.Driver
+    #url: jdbc:mariadb://192.168.50.208:3306/test
+    url: jdbc:mariadb://100.0.0.230:3306/test
+    username: portal
+    password: portal
+
+    security:
+      user:
+        name: admin
+        password: admin123!
+    autoconfigure:
+      exclude: org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration
+logging:
+  pattern:
+    console: "%d %-5level %logger : %msg%n"
+  level:
+    cloudPlatform: INFO
+    org.springframework: DEBUG
