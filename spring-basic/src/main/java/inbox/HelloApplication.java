@@ -1,8 +1,5 @@
 package inbox;
 
-import inbox.member.MemberSerivce;
-import inbox.member.MemberServiceImpl;
-import inbox.order.OrderServiceImpl;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration;

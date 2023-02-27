@@ -3,17 +3,14 @@ package inbox.order;
 import inbox.AppConfig;
 import inbox.member.Grade;
 import inbox.member.Member;
-import inbox.member.MemberSerivce;
-import inbox.member.MemberServiceImpl;
+import inbox.member.MemberService;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 public class OrderServiceTest {
     AppConfig appConfig = new AppConfig();
 
-    MemberSerivce memberSerivce = appConfig.memberSerivce();
+    MemberService memberSerivce = appConfig.memberService();
     OrderService orderService = appConfig.orderService();
 
     @Test

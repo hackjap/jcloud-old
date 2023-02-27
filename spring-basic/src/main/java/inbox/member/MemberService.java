@@ -1,6 +1,9 @@
 package inbox.member;
 
-public interface MemberSerivce {
+import org.springframework.stereotype.Component;
+
+
+public interface MemberService {
     void join(Member member);
 
     Member findMember(Long memberId);

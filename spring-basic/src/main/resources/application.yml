@@ -20,9 +20,9 @@ spring:
         password: admin123!
     autoconfigure:
       exclude: org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration
-logging:
-  pattern:
-    console: "%d %-5level %logger : %msg%n"
-  level:
-    cloudPlatform: INFO
-    org.springframework: DEBUG
+#logging:
+#  pattern:
+#    console: "%d %-5level %logger : %msg%n"
+#  level:
+#    cloudPlatform: INFO
+#    org.springframework: DEBUG

@@ -18,3 +18,6 @@ private final MemberRepository memberRepository = new MemoryMemberRepository();
 [ 스프링 컨테이너 ]
 ApplicationContext = 스프링 컨테이너 
 스프링 컨테이너에 등록된 객체를 "스프링 빈" 이라고 힘
+
+[ 싱글톤 컨테이너 ]
+기존의 싱글톤 패턴의 문제점을 해결하면서, 객체 인스턴스를 싱글톤(1개만 생성) 관리함.
