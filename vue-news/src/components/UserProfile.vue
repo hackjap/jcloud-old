@@ -1,0 +1,44 @@
+<template>
+  <div>
+    <div class="user-container">
+      <div>
+        <i class="fas fa-user"></i>
+      </div>
+      <div class="user-description">
+        <!-- 상위 컴포넌트에서 정의할 영역  -->
+        <slot name="username"> </slot>
+        <div class="time">
+          <slot name="time"></slot>
+           <!-- time: {{info.created }} -->
+           <slot name="karma"></slot>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  props:{
+   info: Object 
+  }
+}
+</script>
+
+<style scoped>
+  .user-container {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem;
+    font-size: 2.5rem;
+  }
+  .user-description {
+   padding-left: 10px;
+  }
+  .item {
+    font-size: 0.7rem;
+  }
+  .time {
+    font-size: 0.2rem;
+  }
+</style>

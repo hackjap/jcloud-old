@@ -1,0 +1,26 @@
+server:
+  port: 7777
+
+spring:
+  datasource:
+    driver-class-name: org.mariadb.jdbc.Driver
+    #url: jdbc:mariadb://192.168.50.208:3306/test
+    url: jdbc:mariadb://100.0.0.230:3306/test
+    username: portal
+    password: portal
+
+  jpa:
+    hibernate:
+      ddl-auto: create
+      properties:
+        hibernate:
+          #show_sql:
+          format_sql: treu
+
+
+#logging:
+#  pattern:
+#    console: "%d %-5level %logger : %msg%n"
+#  level:
+#    cloudPlatform: INFO
+#    org.springframework: DEBUG

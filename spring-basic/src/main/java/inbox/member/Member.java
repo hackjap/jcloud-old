@@ -1,6 +1,7 @@
 package inbox.member;
 
 
+
 public class Member {
 
     private Long id;

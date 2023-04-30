@@ -8,6 +8,7 @@
 		<module>portal</module>
 		<module>spring-basic</module>
         <module>cloud-native-java</module>
+        <module>spring-jpa</module>
     </modules>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
