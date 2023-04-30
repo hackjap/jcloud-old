@@ -9,16 +9,16 @@ import lombok.Setter;
 @Getter
 @Setter
 @NoArgsConstructor
-public class PodDto {
+public class NodeDto {
 
     private String name;
-    private String status;
-    private String namespace;
+    private String status; // status/conditions/type : ready
+    private String address; // status/addresses/address
 
     @Builder
-    public PodDto(String name, String status, String namespace) {
+    public NodeDto(String name, String status, String address) {
         this.name = name;
         this.status = status;
-        this.namespace = namespace;
+        this.address = address;
     }
 }

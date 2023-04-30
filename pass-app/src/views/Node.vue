@@ -9,7 +9,7 @@
         </div>
         <div class="namespace">
           <p>
-          {{ item.namespace }}
+          {{ item.address }}
           </p>
         </div>
         <div>
@@ -36,7 +36,7 @@ export default {
   },
   methods: {
     async getData() {
-      this.$store.dispatch("FETCH_PODS");
+      this.$store.dispatch("FETCH_NODES");
     },
   },
 };

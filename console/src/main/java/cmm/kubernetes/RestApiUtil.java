@@ -21,13 +21,18 @@ public class RestApiUtil {
 
     private final RestTemplate restTemplate;
 
-    private final String API_URL = "/api/v1/namespaces/default/";
+    public static  final  String API_URL = "/api/v1/";
+//
+    public static final String API2_URL = "/apis/apps/v1/";
 
     public static final String RESOURCE_TYPE_POD = "pods";
+    public static final String RESOURCE_TYPE_DEPLOYMENT = "deployments";
+    public static final String RESOURCE_TYPE_NODE = "nodes";
 
-    public ResponseEntity execute(HttpMethod httpMethod, String resourceType) {
 
-        String url = API_SERVER + API_URL + resourceType;
+    public ResponseEntity execute(HttpMethod httpMethod, String resourceType, String apiUrl) {
+
+        String url = API_SERVER + apiUrl + resourceType;
 
         HttpHeaders headers = new HttpHeaders();
         headers.setBearerAuth(API_TOKEN);
@@ -37,4 +42,5 @@ public class RestApiUtil {
 
         return restTemplate.exchange(url, httpMethod, httpEntity, Map.class);
     }
+
 }

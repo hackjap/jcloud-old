@@ -4,7 +4,7 @@
       <li v-for="item in this.$store.state.workload" :key="item.name" class="post">
         <div class="status">
           <p>
-          {{ item.status }}
+          {{item.replicas || 0 }}
           </p>
         </div>
         <div class="namespace">
@@ -13,10 +13,11 @@
           </p>
         </div>
         <div>
-          <p class="item-title">
-            {{ item.name }}
-          </p>
+            <p class="item-title">
+              {{ item.name }}
+            </p>
         </div>
+
       </li>
     </ul>
   </div>
@@ -36,7 +37,7 @@ export default {
   },
   methods: {
     async getData() {
-      this.$store.dispatch("FETCH_PODS");
+      this.$store.dispatch("FETCH_DEPLOYMENTS");
     },
   },
 };

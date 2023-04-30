@@ -1,5 +1,7 @@
 server:
   port: 9080
+  servlet:
+    context-path: /kubernetes/api
 
 spring:
 #  rabbitmq:
