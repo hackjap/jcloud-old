@@ -2,7 +2,8 @@
   <div>
     <ul class="item-list">
       <li v-for="item in this.$store.state.workload" :key="item.name" class="post">
-        <div class="status">
+        <div class="status" :class="{status_active:item.status == 'Running',
+        status_none_active:item.status !='Running'}">
           <p>
           {{ item.status }}
           </p>
@@ -47,13 +48,21 @@ export default {
     margin: 0;
     padding: 0;
   }
-  .status{
+  .status_active{
     width: 100px;
     height: 50px;
     display: flex;
     align-content: center;
     justify-content: center;
     color: #42b883;
+  }
+  .status_none_active{
+    width: 100px;
+    height: 50px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    color: red;
   }
   .namespace{
     width: 120px;

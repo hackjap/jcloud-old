@@ -1,0 +1,8 @@
+#GET http://localhost:8888
+
+
+POST http://localhost:8888
+Content-Type: application/json
+
+< post.json
+

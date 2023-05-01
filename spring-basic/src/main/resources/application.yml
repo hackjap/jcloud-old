@@ -1,12 +1,12 @@
 server:
   port: 8888
-
+#
 spring:
-  rabbitmq:
-    host: 192.168.50.208
-    port: 5672
-    username: admin
-    password: okestro2018!
+#  rabbitmq:
+#    host: 192.168.50.208
+#    port: 5672
+#    username: admin
+#    password: okestro2018!
   datasource:
     driver-class-name: org.mariadb.jdbc.Driver
     #url: jdbc:mariadb://192.168.50.208:3306/test
